@@ -4,4 +4,5 @@
 
 **Plus Bankiing App is a Ui only project to demonstrate the use of Jetpack Compose.**
 
-If your a fellow developer looking for beginner android project to contribute to or learn jetpack compose you can use the help of this project
+- If your a fellow developer looking to learn jetpack compose you can use this project
+
