@@ -7,6 +7,6 @@
 - If your a fellow developer looking to learn jetpack compose you can learn from this project...
 
 ## Contribution 🤝
-If your new to contribution and want to practice contribution you can do it here or u can raise issue if you want to make any improvements
+If your new to open source and want to play around with contribution you can do it here or u can raise issue if you want to make any improvements or fix any bugs
 [contribution guidelines](CONTRIBUTING.md)
 
