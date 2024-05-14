@@ -9,7 +9,7 @@ If your changes wont break the app, will merge your pull request.
 
 U can also raise issue if u encounter any bugs or have a suggestion for any new feature
 
-In the end have thats what matters!!!
+In the end have fun thats what matters!!!
 
 
 
