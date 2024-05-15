@@ -2,6 +2,8 @@
 
 ![Plus_Bank](https://github.com/shalenMathew/Plus-Bank/assets/119736953/d68ee5e9-c46b-4d80-80bc-39273448c602)
 
+
+
 **Plus Bankiing App is a Ui only project to demonstrate the use of Jetpack Compose.**
 
 - If your a fellow developer looking to learn jetpack compose you can learn from this project...
@@ -9,6 +11,9 @@
 ***Install the apk from here 👇***
 
 [![Static Badge](https://img.shields.io/badge/MovieFlix-APK-red?logo=android)](https://github.com/shalenMathew/Plus-Bank/releases)
+
+## App demo
+https://github.com/shalenMathew/Plus-Bank/assets/119736953/154b8dbe-5002-472a-941a-49d136d7e299
 
 ## Contribution 🤝
 - If your new to open source and want to play around with contribution you can do it here or u can raise issue if you want to make any improvements or fix any bugs
@@ -22,5 +27,7 @@ Connect me using shalenmj@gmail.com
 Twitter - https://twitter.com/shalenMathew
 
 Linkedln - https://www.linkedin.com/in/shalen-mathew-3b566921b/
+
+
 
 
