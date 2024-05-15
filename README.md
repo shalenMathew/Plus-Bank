@@ -12,7 +12,7 @@
 
 [![Static Badge](https://img.shields.io/badge/MovieFlix-APK-red?logo=android)](https://github.com/shalenMathew/Plus-Bank/releases)
 
-## App demo
+## App demo 📽️
 https://github.com/shalenMathew/Plus-Bank/assets/119736953/154b8dbe-5002-472a-941a-49d136d7e299
 
 ## Contribution 🤝
