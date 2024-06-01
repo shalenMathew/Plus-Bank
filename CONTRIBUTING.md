@@ -17,6 +17,6 @@ In the end have fun thats what matters!!!
 
 - Open issue regarding proposed change.
 - If your proposed change is approved, Fork this repo and do changes.
-- Open PR against latest `dev` branch. Add nice description in PR.
+- Open PR. Add nice description in PR.
 - You're done!
 
