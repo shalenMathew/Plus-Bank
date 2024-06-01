@@ -10,7 +10,8 @@
 
 ***Install the apk from here 👇***
 
-[![Static Badge](https://img.shields.io/badge/MovieFlix-APK-red?logo=android)](https://github.com/shalenMathew/Plus-Bank/releases)
+[![Static Badge](https://img.shields.io/badge/PlusBank-APK-red?logo=android)]()
+
 
 ## App demo 📽️
 https://github.com/shalenMathew/Plus-Bank/assets/119736953/154b8dbe-5002-472a-941a-49d136d7e299
