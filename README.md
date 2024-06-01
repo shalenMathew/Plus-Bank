@@ -10,7 +10,8 @@
 
 ***Install the apk from here 👇***
 
-[![Static Badge](https://img.shields.io/badge/PlusBank-APK-red?logo=android)](https://github.com/shalenMathew/Plus-Bank/releases/tag/v1.0)
+[![Static Badge](https://img.shields.io/badge/Plus%20Bank-APK-red?logo=android)]
+
 
 
 ## App demo 📽️
