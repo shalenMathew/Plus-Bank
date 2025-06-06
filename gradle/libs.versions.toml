@@ -1,6 +1,6 @@
 [versions]
 accompanistSystemuicontroller = "0.27.0"
-agp = "8.4.0"
+agp = "8.10.1"
 constraintlayout = "2.1.4"
 constraintlayoutCompose = "1.0.1"
 exoplayerCore = "2.19.1"

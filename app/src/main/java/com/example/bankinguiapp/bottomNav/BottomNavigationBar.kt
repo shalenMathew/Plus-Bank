@@ -36,8 +36,10 @@ fun BottomNavigationBar(navController: NavController){
     NavigationBar{
 
 
-        val navBackStackEntry by navController.currentBackStackEntryAsState() //is used to observe the current back stack entry in the NavController.
-        val currentRoute = navBackStackEntry?.destination?.route  // is used to get the route of the current destination in your navigation graph.
+        val navBackStackEntry by navController.currentBackStackEntryAsState() //is used to observe the current back stack entry in
+        // the NavController.
+        val currentRoute = navBackStackEntry?.destination?.route  // is used to get the route of the current destination in your
+        // navigation graph.
 
         Row(modifier = Modifier.background(Color.Black)) {
 

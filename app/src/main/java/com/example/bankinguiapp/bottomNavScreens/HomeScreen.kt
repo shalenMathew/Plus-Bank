@@ -17,8 +17,7 @@ import com.example.bankinguiapp.homeDesign.WalletSection
 @Preview
 @Composable
 fun HomeScreen(){
-
-    Column() {
+    Column {
         WalletSection()
         CardSection()
         Spacer(modifier = Modifier.height(15.dp))

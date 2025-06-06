@@ -131,6 +131,7 @@ class MainActivity : ComponentActivity() {
     @Preview
     @Composable
     fun BottomNavSetUp(){
+
         Surface(modifier = Modifier.fillMaxSize(),
             color = Color.Black) {
 

@@ -55,7 +55,6 @@ val financeList:List<Finance> = listOf(
 @Composable
 fun FinanceSection(){
 
-
     Column(modifier=Modifier.padding(end = 12.dp)) {
 
         Text(text = "Finance",
