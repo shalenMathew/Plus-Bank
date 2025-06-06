@@ -6,7 +6,6 @@
 
 **Plus Bankiing App is a Ui only project to demonstrate the use of Jetpack Compose.**
 
-Random checks
 
 ***Install the apk from here 👇***
 
