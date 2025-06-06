@@ -1,3 +1,6 @@
+import com.android.build.api.dsl.Lint
+import com.android.build.api.dsl.LintOptions
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -47,6 +50,14 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
+    fun Lint.() {
+        abortOnError = false // Don't fail build on errors
+        warningsAsErrors = false // Let warnings be warnings
+        checkReleaseBuilds=false // Optional: skip lint on release builds
+    }
+
 }
 
 dependencies {

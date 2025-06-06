@@ -25,12 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run lint
+      - run: ./gradlew lintDebug
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Upload html test report
+      - uses: actions/upload-artifact@v2
+        with :
+          - name : index.html
+          - path : app/build/reports/lint-results-debug.html
+
+
+
+
+

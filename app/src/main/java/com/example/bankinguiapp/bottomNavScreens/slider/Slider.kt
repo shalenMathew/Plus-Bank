@@ -19,6 +19,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -52,7 +53,7 @@ private fun DraggableControl(
             .background(Color.Black, CircleShape),
         contentAlignment = Alignment.Center
     ) {
-        val isConfirmed = derivedStateOf { progress >= 0.8f }
+        val isConfirmed = remember {derivedStateOf { progress >= 0.8f }}
 
         Crossfade(targetState = isConfirmed.value) {
             if (it) {
@@ -86,9 +87,9 @@ fun ConfirmationButton(
         (width - dragSize).toPx()
     }
     val anchors = mapOf(0f to ConfirmationState.DEFAULT, sizePx to ConfirmationState.CONFIRMED)
-    val progress = derivedStateOf {
+    val progress = remember { derivedStateOf {
         if (swipeableState.offset.value == 0f) 0f else swipeableState.offset.value / sizePx
-    }
+    } }
 
     Box(
         modifier = modifier
