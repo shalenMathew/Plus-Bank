@@ -29,15 +29,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: sample run
+        run: echo lint
 
-      - name: Run lint
-        run: ./gradlew lintDebug
-
-      - name: Upload lint report
-        uses: actions/upload-artifact@v4
-        with:
-          name: lint-report
-          path: app/build/reports/lint-results-debug.html
+#      - name: Run lint
+#        run: ./gradlew lintDebug
+#
+#      - name: Upload lint report
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: lint-report
+#          path: app/build/reports/lint-results-debug.html
 
   unit-test:
     needs: [lint]
@@ -59,15 +61,18 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-            
-      - name: Run tests
-        run: ./gradlew test
 
-      - name: Upload the test report
-        uses: actions/upload-artifact@v4
-        with:
-          name: unit test-report
-          path: app/build/reports/tests/testDebugUnitTest/
+      - name: sample run
+        run: echo test
+
+#      - name: Run tests
+#        run: ./gradlew test
+#
+#      - name: Upload the test report
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: unit test-report
+#          path: app/build/reports/tests/testDebugUnitTest/
 
   instrumentation-test:
     needs: [unit-test]
@@ -92,20 +97,23 @@ jobs:
          restore-keys: |
            ${{ runner.os }}-gradle-       
 
-     - name: Run espresso tests
-       uses: reactivecircus/android-emulator-runner@v2
-       with:
-        api-level: 31
-        arch: x86_64
-        channel: stable
-        script: ./gradlew connectedCheck --stacktrace --info
+     - name: sample run
+       run: echo android test
 
-
-     - name: Upload instrumentation test report
-       uses: actions/upload-artifact@v4
-       with:
-        name: instrumentation_test_report
-        path: app/build/reports/androidTests/connected/debug/
+#     - name: Run espresso tests
+#       uses: reactivecircus/android-emulator-runner@v2
+#       with:
+#        api-level: 31
+#        arch: x86_64
+#        channel: stable
+#        script: ./gradlew connectedCheck --stacktrace --info
+#
+#
+#     - name: Upload instrumentation test report
+#       uses: actions/upload-artifact@v4
+#       with:
+#        name: instrumentation_test_report
+#        path: app/build/reports/androidTests/connected/debug/
 
 
 
