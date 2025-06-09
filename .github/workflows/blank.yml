@@ -84,7 +84,7 @@ jobs:
        with:
         api-level: 31
         arch: x86_64
-        channel: 0
+        channel: stable
         script: ./gradlew connectedCheck --stacktrace --info
 
 
