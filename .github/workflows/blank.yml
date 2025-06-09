@@ -83,7 +83,10 @@ jobs:
        uses: reactivecircus/android-emulator-runner@v2
        with:
         api-level: 31
+        arch: x86_64
+        channel: 0
         script: ./gradlew connectedCheck --stacktrace --info
+
 
      - name: Upload instrumentation test report
        uses: actions/upload-artifact@v4
