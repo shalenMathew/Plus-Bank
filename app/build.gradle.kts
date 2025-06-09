@@ -96,4 +96,5 @@ dependencies {
 
     implementation (libs.androidx.constraintlayout)
     implementation (libs.androidx.constraintlayout.compose)
+    testImplementation(kotlin("test"))
 }
