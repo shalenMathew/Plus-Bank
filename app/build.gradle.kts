@@ -4,6 +4,7 @@ import com.android.build.api.dsl.LintOptions
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("org.sonarqube") version "3.3"
 }
 
 android {
@@ -22,6 +23,7 @@ android {
             useSupportLibrary = true
         }
     }
+
 
     buildTypes {
         release {
