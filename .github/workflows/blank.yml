@@ -131,6 +131,9 @@ jobs:
         with:
           java-version: 11
 
+      - name: Give gradlew execute permission
+        run: chmod +x ./gradlew
+
       - name: SonarCloud Scan
         run: ./gradlew app:sonarqube -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
