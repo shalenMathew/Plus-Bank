@@ -72,7 +72,7 @@ jobs:
   instrumentation-test:
     needs: [unit-test]
 
-    runs-on: macos-latest
+    runs-on: macos-13
 
 
     steps:
