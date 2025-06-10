@@ -9,7 +9,7 @@ on:
 
 # ensures one run at a time, and cancel older runs in the queue if new commits r pushed
 concurrency:
- group: androidTest-${{ github.ref }}
+ group: blank-${{ github.ref }}
  cancel-in-progress: true
 
 
@@ -35,8 +35,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: sample run
-        run: echo lint
 
       - name: Run lint
         run: ./gradlew lintDebug
@@ -67,9 +65,6 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-
-      - name: sample run
-        run: echo test
 
       - name: Run tests
         run: ./gradlew test

@@ -14,7 +14,7 @@ on:
 
 # ensures one run at a time, and cancel older runs in the queue if new commits r pushed
 concurrency:
-  group: blankWorkflow-${{ github.ref }}
+  group: androidTest-${{ github.ref }}
   cancel-in-progress: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
