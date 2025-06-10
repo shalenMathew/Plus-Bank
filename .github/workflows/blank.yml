@@ -42,7 +42,7 @@ jobs:
 #          path: app/build/reports/lint-results-debug.html
 
   unit-test:
-    needs: [lint]
+#    needs: [lint]
 
     runs-on: ubuntu-latest
 
@@ -75,7 +75,7 @@ jobs:
 #          path: app/build/reports/tests/testDebugUnitTest/
 
   instrumentation-test:
-    needs: [unit-test]
+#    needs: [unit-test]
 
     runs-on: macos-13
 
@@ -87,40 +87,40 @@ jobs:
      - name: Give gradlew execute permission
        run: chmod +x ./gradlew
 
-#     - name: Setup Gradle cache
-#       uses: actions/cache@v4
-#       with:
-#         path: |
-#           ~/.gradle/caches
-#           ~/.gradle/wrapper
-#         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-#         restore-keys: |
-#           ${{ runner.os }}-gradle-
+     - name: Setup Gradle cache
+       uses: actions/cache@v4
+       with:
+         path: |
+           ~/.gradle/caches
+           ~/.gradle/wrapper
+         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+         restore-keys: |
+           ${{ runner.os }}-gradle-
 
      - name: sample run
        run: echo android test
 
-#     - name: Run espresso tests
-#       uses: reactivecircus/android-emulator-runner@v2
-#       with:
-#        api-level: 31
-#        arch: x86_64
-#        channel: stable
-#        script: ./gradlew connectedCheck --stacktrace --info
-#
-#
-#     - name: Upload instrumentation test report
-#       uses: actions/upload-artifact@v4
-#       with:
-#        name: instrumentation_test_report
-#        path: app/build/reports/androidTests/connected/debug/
+     - name: Run espresso tests
+       uses: reactivecircus/android-emulator-runner@v2
+       with:
+        api-level: 31
+        arch: x86_64
+        channel: stable
+        script: ./gradlew connectedCheck --stacktrace --info
+
+
+     - name: Upload instrumentation test report
+       uses: actions/upload-artifact@v4
+       with:
+        name: instrumentation_test_report
+        path: app/build/reports/androidTests/connected/debug/
 
 
 
 
 
   static-code-analysis:
-    needs: [ instrumentation-test ]
+#    needs: [ instrumentation-test ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
