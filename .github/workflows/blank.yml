@@ -9,7 +9,7 @@ on:
 
 # ensures one run at a time, and cancel older runs in the queue if new commits r pushed
 concurrency:
- group: ${{ github.workflow }}-${{ github.ref }}
+ group: androidTest-${{ github.ref }}
  cancel-in-progress: true
 
 
