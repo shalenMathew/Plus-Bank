@@ -38,14 +38,14 @@ jobs:
       - name: sample run
         run: echo lint
 
-#      - name: Run lint
-#        run: ./gradlew lintDebug
-#
-#      - name: Upload lint report
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: lint-report
-#          path: app/build/reports/lint-results-debug.html
+      - name: Run lint
+        run: ./gradlew lintDebug
+
+      - name: Upload lint report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: app/build/reports/lint-results-debug.html
 
   unit-test:
 #    needs: [lint]
@@ -71,19 +71,14 @@ jobs:
       - name: sample run
         run: echo test
 
-#      - name: Run tests
-#        run: ./gradlew test
-#
-#      - name: Upload the test report
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: unit test-report
-#          path: app/build/reports/tests/testDebugUnitTest/
+      - name: Run tests
+        run: ./gradlew test
 
-
-
-
-
+      - name: Upload the test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit test-report
+          path: app/build/reports/tests/testDebugUnitTest/
 
 
 #  static-code-analysis:

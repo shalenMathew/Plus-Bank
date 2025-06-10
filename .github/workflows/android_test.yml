@@ -123,28 +123,28 @@ jobs:
 
 #  makes the emulator to boot up faster
 
-#      - name: Emulator Snapshot After Firstboot Warmup
-#
-#        if: "${{ github.event.inputs.clearCaches != '' || (steps.avd-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/master') }}"
-#        env:
-#          FIRST_BOOT_DELAY: ${{ matrix.first-boot-delay }}
-#        uses: reactivecircus/android-emulator-runner@v2
-#        with:
-#          api-level: ${{ matrix.api-level }}
-#          force-avd-creation: false
-#          target: ${{ matrix.target }}
-#          arch: ${{ matrix.arch }}
-#          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-#          sdcard-path-or-size: 100M
-#          disable-animations: true
-#          script: |
-#            touch adb-log.txt
-#            $ANDROID_HOME/platform-tools/adb logcat '*:D' >> adb-log.txt &
-#            $ANDROID_HOME/platform-tools/adb shell su root "setprop ctl.restart zygote"
-#            sleep 10
-#            sleep $FIRST_BOOT_DELAY
-#            adb logcat --clear
-#            echo "First boot warmup completed."
+      - name: Emulator Snapshot After Firstboot Warmup
+
+        if: "${{ github.event.inputs.clearCaches != '' || (steps.avd-cache.outputs.cache-hit != 'true' && github.ref == 'refs/heads/master') }}"
+        env:
+          FIRST_BOOT_DELAY: ${{ matrix.first-boot-delay }}
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          force-avd-creation: false
+          target: ${{ matrix.target }}
+          arch: ${{ matrix.arch }}
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          sdcard-path-or-size: 100M
+          disable-animations: true
+          script: |
+            touch adb-log.txt
+            $ANDROID_HOME/platform-tools/adb logcat '*:D' >> adb-log.txt &
+            $ANDROID_HOME/platform-tools/adb shell su root "setprop ctl.restart zygote"
+            sleep 10
+            sleep $FIRST_BOOT_DELAY
+            adb logcat --clear
+            echo "First boot warmup completed."
 
 
       - name: Run android Tests
